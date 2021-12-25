@@ -1,52 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title> MS DHONI </title>
+<title>Send Mail</title>
+<script src=
+	"https://smtpjs.com/v3/smtp.js">
+</script>
+
+<script type="text/javascript">
+	function sendEmail() {
+	Email.send({
+		Host: "smtp.gmail.com",
+		Username: "sender@email_address.com",
+		Password: "Enter your password",
+		To: 'receiver@email_address.com',
+		From: "sender@email_address.com",
+		Subject: "Sending Email using javascript",
+		Body: "Well that was easy!!",
+	})
+		.then(function (message) {
+		alert("mail sent successfully")
+		});
+	}
+</script>
 </head>
-<body bgcolor="powderblue">
-<h1 style="text-align:center;"> ABOUT MS DHONI </h1>
 
-<hr>
-<p style="text-align:center;"><img src="flow.png" width=200 height=200 alt="no image" style="text-align:center;"></p>
-
-<hr>
-
-<p style="font-size:30px;"> See below</p>
-
-<ul>
-<li>MS Dhoni was former Indian captain</li>
-<li>He was born on 7th July 1981</li>
-<li>He was playing was Chennai Super Kings</li>
-</ul>
-
-<hr>
-
-<dl>
-<dt> D </dt>
-<dd> Determination </dd>
-<dt> H </dt>
-<dd> Hardwork </dd>
-<dt> O </dt>
-<dd> Outstanding </dd>
-
-<!DOCTYPE html>
-<head>
-<title>Form submission</title>
-</head>
 <body>
-
-<form action="mail_handler.php" method="post">
-First Name: <input type="text" name="first_name"><br>
-Last Name: <input type="text" name="last_name"><br>
-Email: <input type="text" name="email"><br>
-Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
-<input type="submit" name="submit" value="Submit">
+<form method="post">
+	<input type="button" value="Send Email"
+		onclick="sendEmail()" />
 </form>
-
 </body>
-</html>
-
-<a href="tel:+12355" target="_blank"> contact us</a>
-</body>  
 
 </html>
