@@ -29,14 +29,22 @@
 <dt> O </dt>
 <dd> Outstanding </dd>
 
-<form >
+<!DOCTYPE html>
+<head>
+<title>Form submission</title>
+</head>
+<body>
 
-Name:<input type="text" name="name"><br>
-Email:<input type="text" name="mail"><br>
-Comment:<input type="text" name="comment"><br>
-<input type="submit" value="Send" onclick="location.href='mailto:a@gmail.com';">
-<input type="reset" value="Reset">
+<form action="mail_handler.php" method="post">
+First Name: <input type="text" name="first_name"><br>
+Last Name: <input type="text" name="last_name"><br>
+Email: <input type="text" name="email"><br>
+Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+<input type="submit" name="submit" value="Submit">
 </form>
+
+</body>
+</html>
 
 <a href="tel:+12355" target="_blank"> contact us</a>
 </body>  
